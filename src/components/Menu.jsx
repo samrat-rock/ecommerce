@@ -8,12 +8,12 @@ function Menu() {
 
    const [open , setOpen] = useState(false)   
   return (
-    <div className='absolute bg-black text-white left-0 top-20 w-full h-[calc(100vh-80px)] flex flex-col items-center justify-center gap-8 text-xl z-10'>
+    <div className=' '>
       <Image src="/menu.png" alt='menu' width={28} height={28} className='cursor-pointer' 
       onClick={()=>setOpen(prev=> !prev)}/>{
 
       open && (
-        <div>
+        <div className='absolute bg-black text-white left-0 top-20 h-[calc(100vh-80px)] flex flex-col w-full items-center justify-center gap-8 text-xl z-10 '>
          <Link href="/">Homepage</Link>
          <Link href="/">Shop</Link>
          <Link href="/">Deals</Link>
