@@ -1,15 +1,21 @@
 "use client";
 
 import Image from "next/image";
-import React, { useState } from "react";
+import { useState } from "react";
+import { useRouter } from "next/navigation";
 
 function Searchbar() {
   const [searchTerm, setSearchTerm] = useState("");
+  const router = useRouter();
 
   const handleSearch = (e) => {
     e.preventDefault();
-    console.log("Searching for:", searchTerm);
-    // Add search function here (e.g., API call or routing logic)
+    const formData = new FormData(e.currentTarget);
+    const name = formData.get("name");
+    
+    if (name) {
+      router.push(`/list?name=${name}`);
+    }
   };
 
   return (
@@ -19,6 +25,7 @@ function Searchbar() {
     >
       <input
         type="text"
+        name="name"
         placeholder="Search here..."
         className="flex-1 bg-transparent outline-none p-2"
         value={searchTerm}
