@@ -40,11 +40,11 @@ function Navbaricons() {
       onClick={()=> setIsCartOpen((prev)=>!prev)}
       />
       <div className='absolute -top-4 -right-4 w-6 h-6 bg-lama rounded-full text-white text-sm flex items-center justify-center'>2</div>
-      </div>
-      {isCartOpen && (
-        <CartModel/>
-      )}
+      {isCartOpen &&  <CartModel/>
+      }
       
+      </div>
+     
       
     </div>
   )
