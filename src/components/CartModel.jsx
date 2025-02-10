@@ -11,6 +11,7 @@ function CartModel() {
         <div className="text-gray-500">Cart is Empty</div>
       ) : (
         <>
+        <h2 className="text-xl">Shopping Cart</h2>
         <div className="flex flex-col gap-8">
             {/*Item */}
         <div className="flex gap-4">
